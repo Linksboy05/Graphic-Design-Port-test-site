@@ -48,7 +48,7 @@ function animateStars() {
 
     let brightness = 0.7 + Math.sin(Date.now() * 0.002 + star.twinkle * 10) * 0.3;
 
-    ctx.fillStyle = `rgba(166, 77, 255, ${brightness})`;
+    ctx.fillStyle = `rgba(166, 77, 255, ${brightness + 0.3 })`;
     ctx.shadowBlur = 10;
     ctx.shadowColor = "#a64dff";
 
