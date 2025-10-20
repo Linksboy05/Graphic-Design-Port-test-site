@@ -13,39 +13,36 @@
 </head>
 <body>
   <!-- Navigation -->
-<header>
-  <nav class="navbar">
-    <div class="logo">Creative<span>Vision</span></div>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Creative<span>Vision</span></div>
 
-    <!--  Hamburger moved inside nav -->
-    <div class="menu-toggle" id="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
+      <!-- Hamburger -->
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html#hero">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#portfolio">Work</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero">
+    <canvas id="starfield"></canvas>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Hi, I'm <span>Aiden Demers</span></h1>
+      <p>Graphic Designer • Illustrator • Web Design • Concept Artist</p>
+      <a href="#portfolio" class="btn">See My Work</a>
     </div>
-
-    <ul class="nav-links">
-      <li><a href="index.html#hero">Home</a></li>
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#portfolio">Work</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-
-	
-<!-- Hero -->
-<section id="hero">
-  <canvas id="starfield"></canvas>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h1>Hi, I'm <span>Aiden Demers</span></h1>
-    <p>Graphic Designer • Illustrator • Web Design • Concept Artist</p>
-    <a href="#portfolio" class="btn">See My Work</a>
-  </div>
-</section>
-
+  </section>
 
   <!-- About -->
   <section id="about">
@@ -54,7 +51,7 @@
       <div class="about-text">
         <h2>About Me</h2>
         <p>
-          I’m Aiden Demers, a graphic designer, esports broadcaster, and collegiate esports player with a deep passion for creative storytelling and competitive gaming.  I’ve spent the last several years developing my skills both in front of the screen and behind the scenes. As a graphic designer, I specialize in creating bold, impactful visuals that elevate brands, teams, and events especially within the gaming and esports space. Whether it’s social media graphics, event branding, or motion design, I focus on clean, purposeful design that captures attention and communicates clearly. 
+          I’m Aiden Demers, a graphic designer, esports broadcaster, and collegiate esports player with a deep passion for creative storytelling and competitive gaming. I specialize in creating bold visuals that elevate brands, teams, and events.
         </p>
         <a href="2025 Portfolio.pdf" class="btn" target="_blank">View PDF Portfolio</a>
       </div>
@@ -77,52 +74,48 @@
         <h3>UI/UX Design</h3>
         <p>Designing user-friendly, visually stunning websites and apps.</p>
       </div>
-		<div class="service-card">
+      <div class="service-card">
         <h3>Concept Art</h3>
-        <p>Visual artwork created to explore and communicate ideas for characters, environments, or stories before they are finalized.</p>
+        <p>Artwork to explore and communicate ideas for characters, environments, or stories before they are finalized.</p>
       </div>
-		<div class="service-card">
-        <h3>3D Art and animation</h3>
-        <p>Creation of three-dimensional digital models and scenes that can be animated to bring characters, objects, and environments to life.</p>
+      <div class="service-card">
+        <h3>3D Art and Animation</h3>
+        <p>Creation of 3D models and scenes that can be animated to bring characters and environments to life.</p>
       </div>
-		<div class="service-card">
+      <div class="service-card">
         <h3>Video Editing</h3>
-        <p>The process of arranging, cutting, and enhancing footage to create a polished and engaging final video.</p>
+        <p>Arranging, cutting, and enhancing footage to create a polished final video.</p>
       </div>
     </div>
   </section>
 
   <!-- Portfolio -->
-<section id="portfolio">
+ <section id="portfolio">
   <h2>Portfolio</h2>
   <div class="portfolio-grid">
-    <a href="portfolio_logo.html" class="card">
-      <img src="https://via.placeholder.com/350x250" alt="">
-      <span class="card-title">Logo Design</span>
-    </a>
+    
+    <div class="portfolio-card">
+      <a href="portfolio_logo.html" class="portfolio-btn">Logo Design</a>
+    </div>
 
-    <a href="portfolio_branding.html" class="card">
-      <img src="https://via.placeholder.com/350x250" alt="">
-      <span class="card-title">WebSite Design</span>
-    </a>
+    <div class="portfolio-card">
+      <a href="portfolio_branding.html" class="portfolio-btn">Website Design</a>
+    </div>
 
-    <a href="portfolio_poster.html" class="card">
-      <img src="https://via.placeholder.com/350x250" alt="">
-      <span class="card-title">Poster Design</span>
-    </a>
+    <div class="portfolio-card">
+      <a href="portfolio_poster.html" class="portfolio-btn">Poster Design</a>
+    </div>
 
-    <a href="portfolio_concept.html" class="card">
-      <img src="https://via.placeholder.com/350x250" alt="">
-      <span class="card-title">Concept Art</span>
-    </a>
+    <div class="portfolio-card">
+      <a href="portfolio_concept.html" class="portfolio-btn">Concept Art</a>
+    </div>
 
-    <a href="portfolio_3d.html" class="card">
-      <img src="https://via.placeholder.com/350x250" alt="">
-      <span class="card-title">3D Art</span>
-    </a>
+    <div class="portfolio-card">
+      <a href="portfolio_3d.html" class="portfolio-btn">3D Art</a>
+    </div>
+
   </div>
 </section>
-
 
 
   <!-- Contact -->
@@ -136,7 +129,7 @@
     </form>
   </section>
 
-  <!-- Social Section -->
+  <!-- Social -->
   <section id="social">
     <h2>Connect with Me</h2>
     <div class="social-links">

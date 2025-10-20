@@ -23,16 +23,41 @@ a:hover {
 }
 
 /* Navbar */
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 50px;
   background: #111;
-  position: sticky;
+  position: fixed; /* header now fixed */
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
   height: 70px;
+}
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #a64dff;
+}
+.logo span {
+  color: #fff;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+.nav-links li {
+  margin: 0 15px;
+}
+.nav-links a {
+  color: #eaeaea;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #a64dff;
 }
 
 .logo {
@@ -502,3 +527,36 @@ footer {
     font-size: 0.95rem;
   }
 }
+
+
+.portfolio-card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(166, 77, 255, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  text-align: center;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(166, 77, 255, 0.6);
+}
+
+.portfolio-btn {
+  display: inline-block;
+  padding: 20px 15px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  background: transparent; /* button inherits card style */
+  transition: color 0.3s;
+}
+
+.portfolio-btn:hover {
+  color: #a64dff;
+}
+
