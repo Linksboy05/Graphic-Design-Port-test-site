@@ -3,22 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Concept Art | CreativeVision</title>
+  <title>Concept Art | CreativeVision</title>
   
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
-	
-	
 </head>
 <body>
   <!-- Navigation -->
   <header>
     <nav class="navbar">
       <div class="logo">Merse<span>Designs</span></div>
-      <ul class="nav-links">
+
+      <!-- Hamburger Button -->
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul class="nav-links" id="nav-links">
         <li><a href="index.html#hero">Home</a></li>
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#portfolio">Work</a></li>
@@ -30,29 +36,31 @@
   <!-- Portfolio Detail -->
   <section class="portfolio-detail">
     <h1>Concept Art</h1>
-    <p>Showcase of Concept Art for both early development stages/final develoment.</p>
-	  <br>
-	  <h1>The Creek</h1>
-	  
-	  <p>For this Project I was inspired from the game Last of Us, specifically Part 2. 
-Although a game focused on storytelling on a grim situation and of course 
-zombies, I wanted to show the beauty the game has, the moments of where 
-you just walk the character through the forest and develop a sense of peace.</p>
+    <p>Showcase of Concept Art for both early development stages/final development.</p>
+    <br>
+    <h1>The Creek</h1>
+    <p>For this project I was inspired by *The Last of Us Part II* — a game filled with emotional storytelling and quiet, beautiful exploration moments. I wanted to capture that peaceful side of the world, walking through the forest.</p>
 
     <div class="portfolio-showcase">
-      <img src="img/art_work/creek_final_detailed-min.png" alt="Logo Example 1" width="1800" height="1300">
-      <img src="img/art_work/creek_progression_2_grayscale.png" alt="Logo Example 2" width="1800" height="1300">
-      
+      <img src="img/art_work/creek_final_detailed-min.png" alt="Creek Final Detailed">
+      <img src="img/art_work/creek_progression_2_grayscale.png" alt="Creek Progression">
     </div>
   </section>
 
-	
-
-	
-	
   <!-- Footer -->
   <footer>
     <p>© 2025 MerseDesigns. Designed by Aiden Demers</p>
   </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    toggle.addEventListener("click", () => {
+      toggle.classList.toggle("active");
+      navLinks.classList.toggle("active");
+    });
+  </script>
 </body>
 </html>
