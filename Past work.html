@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brands | CreativeVision</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Merse<span>Designs</span></div>
+    <button class="menu-toggle" id="menu-toggle">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#hero">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#portfolio">Portfolio</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="Past work.html" class="active">Brands</a></li>
+    </ul>
+  </header>
+
+  <!-- Brands Section -->
+  <section id="brands-page">
+    <div class="brands-container">
+      <h1>Brands/organizations i've worked with </h1>
+      <p class="intro">
+        I’ve collaborated with some incredible brands and organizations, helping them develop powerful visuals and creative storytelling that connect with their audiences. While some being with art and design, other work has also been included in the Esports scene.
+      </p>
+
+      <div class="brand-grid">
+        <a href="https://stclairsaints.ca/" target="_blank" class="brand-card">
+          <img src="img/logos/St.Clair Saints logo.png" alt="St. Clair Saints">
+          <h3>St Clair Saints</h3>
+          <p>Worked on the broadcasting team, i've created graphics for events, Directed streams, Commentated on streams and did observing on games such as Call of Duty, Valorant, Overwatch, Rainbow 6 Seige and Marvel Rivals </p>
+        </a>
+
+        <a href="https://www.collegiatemarvelrivals.com/" target="_blank" class="brand-card">
+          <img src="img/logos/Collegiate Rivals Series.png" alt="Colligate Rivals Series">
+          <h3>Colligate Rivals Series</h3>
+          <p>Part of Colligate Rivals Series broadcasting team. I have created stream Graphics and worked behind the scenes as a POV observer and free cam observer/cinematics</p>
+        </a>
+
+        <a href="https://www.dubby.gg/" target="_blank" class="brand-card">
+          <img src="img/logos/DubbyIconNoBlood_optimized.png" alt="Dubby Energy">
+          <h3>Dubby Energy</h3>
+          <p>Partnered with Dubby as a "Content Creator and colligate Esports player". Dubby is a clean, natural and great tasting energy drink created in a extreamly healthy way and jitter free <br> I also have my own sponsor code "MERSE" for 10% off products</p>
+        </a>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Aiden Demers | MerseDesigns</p>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+    menuToggle.addEventListener("click", () => {
+      menuToggle.classList.toggle("active");
+      navLinks.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
