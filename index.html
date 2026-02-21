@@ -45,6 +45,53 @@
     </div>
   </section>
 
+<!-- Featured Work Slider -->
+<section id="featured">
+  <h2>Featured Work</h2>
+  <div class="featured-slider">
+    <div class="slides-container">
+      <div class="slide fade">
+        <img src="img/art_work/poster mock up 2.png" alt="Valorant Poster Series">
+        <div class="slide-caption">Valorant Poster Mockup</div>
+      </div>
+      <div class="slide fade">
+        <img src="img/art_work/2024 Nissan GT-R project.png" alt="Nissan GT-R Poster">
+        <div class="slide-caption">2024 Nissan GT-R Project</div>
+      </div>
+      <div class="slide fade">
+        <img src="img/art_work/creek_final_detailed-min.png" alt="The Creek Concept Art">
+        <div class="slide-caption">The Creek</div>
+      </div>
+      <div class="slide fade">
+        <img src="img/art_work/demers_Infographic assignment.png" alt="F1 Infographic">
+        <div class="slide-caption">F1 Vector Infographic</div>
+      </div>
+      <div class="slide fade">
+        <img src="img/art_work/Merse logo.png" alt="Merse Logo">
+        <div class="slide-caption">Merse Logo</div>
+      </div>
+      <div class="slide fade">
+        <img src="img/esports work/AceMerse.png" alt="Esports Player Poster">
+        <div class="slide-caption">Esports Player Roster</div>
+      </div>
+    </div>
+    
+    <!-- Navigation Buttons -->
+    <button class="slider-btn prev" id="prevBtn">❮</button>
+    <button class="slider-btn next" id="nextBtn">❯</button>
+    
+    <!-- Dot Indicators -->
+    <div class="slider-dots">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+    </div>
+  </div>
+</section>
+
 <!-- About -->
 <section id="about">
   <div class="about-container">
@@ -68,6 +115,9 @@
           </a>
           <a href="https://www.dubby.gg/" target="_blank">
             <img src="img/logos/DubbyIconNoBlood_optimized.png" alt="Dubby Energy">
+          </a>
+          <a href="https://myprintsupplier.com//" target="_blank">
+            <img src="img/logos/AA-Associates-LOGO-CMYK1.png" alt="A&A Associates">
           </a>
           
         </div>
@@ -119,12 +169,10 @@
     
 	  
 	  
-	<div class="portfolio-card">
-	  <a href="" class="portfolio-btn">Esports</a>
-	  </div>
+
 	  
 	  	<div class="portfolio-card">
-	  <a href="" class="portfolio-btn">Branding</a>
+	  <a href="portfolio_mockups.html" class="portfolio-btn">Mockups</a>
 	  </div>
 	  
     <div class="portfolio-card">
@@ -132,7 +180,7 @@
     </div>
 
     <div class="portfolio-card">
-      <a href="portfolio_branding.html" class="portfolio-btn">Website Design</a>
+      <a href="portfolio_websitedesign.html" class="portfolio-btn">Website Design</a>
     </div>
 
     <div class="portfolio-card">
@@ -154,10 +202,12 @@
   <!-- Contact -->
   <section id="contact">
     <h2>Contact me</h2>
-    <form id="contactForm">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
+    <form id="contactForm" action="https://formsubmit.co/mersedesigns@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="index.html#contact">
       <button type="submit" class="btn">Send</button>
     </form>
   </section>
@@ -183,7 +233,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 MerseDesigns. Designed by Aiden.</p>
+    <p>© 2026 MerseDesigns. Designed by Aiden.</p>
   </footer>
 
   <!-- JS -->
