@@ -539,6 +539,11 @@ footer {
   .about-text p {
     font-size: 0.95rem;
   }
+
+  /* Portfolio Detail Pages - Tablet */
+  .portfolio-detail {
+    padding: 40px 20px;
+  }
 }
 
 
@@ -910,5 +915,16 @@ footer {
   .dot {
     width: 8px;
     height: 8px;
+  }
+}
+
+/* Portfolio Mobile - Small phones */
+@media (max-width: 480px) {
+  .portfolio-detail {
+    padding: 20px 15px;
+  }
+
+  .portfolio-showcase.single img {
+    max-width: 90vw;
   }
 }
