@@ -458,6 +458,17 @@ footer {
   object-fit: contain;
 }
 
+/* Video sizing for portfolio showcase */
+.portfolio-showcase.single video {
+  width: 100%;
+  max-width: 800px;    /* constrain large screens */
+  max-height: 80vh;    /* prevent tall videos from overflowing */
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(166, 77, 255, 0.4);
+  object-fit: contain;
+}
+
 .portfolio-showcase img {
   width: 70%;
   border-radius: 15px;
