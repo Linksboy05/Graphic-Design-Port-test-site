@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ace_Merse - Esports Player Stats</title>
+  <link rel="stylesheet" href="esports_page_styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6b54b8b76f.js"></script>
+</head>
+<body>
+
+<canvas id="particles"></canvas>
+
+<!-- LIGHTBOX MODAL -->
+<div id="lightboxModal" class="lightboxModal">
+  <span class="lightboxClose">&times;</span>
+  <img class="lightboxImage" src="" alt="">
+  <span class="lightboxCaption"></span>
+</div>
+
+<div class="page">
+
+<!-- NAVBAR -->
+
+<div class="navbar" id="navbar">
+
+<div class="logo">
+ACE_MERSE
+</div>
+
+<div class="navCenter">
+
+<h3>Player Stats</h3>
+
+</div>
+
+<a href="Graphic-Design-Port-test-site-main/index.html" class="join">
+Graphic Design Portfolio
+</a>
+
+</div>
+
+<div class="mainGrid">
+
+<!-- LEFT -->
+
+<div class="leftPanel">
+
+<div class="playerCard">
+
+<h2>Ace_Merse</h2>
+
+<p class="real">
+Aiden Demers
+</p>
+
+<p>Windsor Ontario, CA</p>
+
+<p> Current :St. Clair College</p>
+
+<div class="role"> <h3>Role</h3>
+
+<img src="Graphic-Design-Port-test-site-main/img/icons/Strategist.png" class="roleIcon" alt="Strategist icon">
+
+<p>Strategist</p>
+
+</div>
+
+<p class="rank"> <h3>Rank</h3>
+Grandmaster
+</p>
+
+<p class="years"> <h3>Teams</h3>
+St. Clair College January 2026 - Present
+</p>
+
+<div class="socials">
+
+<i class="fab fa-twitter"></i>
+
+<i class="fab fa-twitch"></i>
+
+<i class="fab fa-youtube"></i>
+
+<i class="fab fa-discord"></i>
+
+</div>
+
+</div>
+
+<div class="statsPanel">
+
+<h3>Season Performance 6.5</h3>
+
+<div class="heroStat">
+
+<p>Loki</p>
+
+<p class="numbers">
+WR 55.5% | KDA 7.68
+</p>
+
+</div>
+
+<div class="heroStat">
+
+<p>Cloak & Dagger</p>
+
+<p class="numbers">
+WR 52.9% | KDA 7.70
+</p>
+
+</div>
+
+<div class="heroStat">
+
+<p>Invisible Woman</p>
+
+<p class="numbers">
+WR 48.3% | KDA 5.87
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CENTER -->
+
+<div class="centerPanel">
+
+<div class="logoBackground">
+  <img src="Graphic-Design-Port-test-site-main/img/St,Clair Saints logo-Picsart-AiImageEnhancer.png" class="teamLogo" alt="St Clair team logo">
+</div>
+
+<div class="playerPhotoWrapper">
+  <img src="Graphic-Design-Port-test-site-main/img/AceMerse_Rivals-removebg-preview.png" class="player" alt="Player photo">
+</div>
+
+<h2 class="gamertag">
+Ace_Merse
+</h2>
+
+<div class="mediaSection">
+  <h3>Media</h3>
+  <div class="carouselSection">
+    <div class="carouselHeader">
+      <h4>Photos</h4>
+      <div class="carouselControls">
+        <button class="carouselBtn prev" data-carousel="photoCarousel" aria-label="Previous photo">‹</button>
+        <button class="carouselBtn next" data-carousel="photoCarousel" aria-label="Next photo">›</button>
+      </div>
+    </div>
+    <div class="carouselTrack" id="photoCarousel">
+      <div class="carouselCard">
+        <img src="Graphic-Design-Port-test-site-main/img/SCC_Roster.webp" alt="Roster photo">
+        <span class="mediaLabel">Roster</span>
+      </div>
+      <div class="carouselCard">
+        <img src="Graphic-Design-Port-test-site-main/img/AceMerse_Rivals.jpg" alt="Team photo">
+        <span class="mediaLabel">Player Headshot</span>
+      </div>
+  
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- RIGHT -->
+
+<div class="rightPanel">
+
+<div class="matchBox">
+
+<h3>Next Match</h3>
+
+<div class="score">
+
+<span>St Clair College</span>
+
+<h1>VS</h1>
+
+<span>Lander University Academy</span>
+
+</div>
+
+<p>NECC Week 10 Playoffs Championship round</p>
+
+</div>
+
+<div class="matchHistory">
+
+<select class="leagueSelect" onchange="filterMatches(this.value)">
+  <option value="necc" selected>NECC 2026 Winter East A Division V</option>
+  <option value="college">2026 No Mans LAN</option>
+  <option value="scrim">SCRIMS</option>
+</select>
+
+<div class="matches">
+
+<div class="matchCard win necc">
+
+<div class="matchTop">
+
+<div class="teams">
+
+<span>St Clair College</span>
+
+<h4>3-2</h4>
+
+<span>Pace University</span>
+
+</div>
+
+<div class="result winText">
+WIN
+</div>
+
+</div>
+
+<p>NECC Week 1</p>
+
+<!--<a href="#" class="vod">
+Watch VOD
+</a> -->
+
+
+
+
+
+
+</div>
+
+<div class="matchCard win necc">
+
+<div class="matchTop">
+
+<div class="teams">
+
+<span>St Clair College</span>
+
+<h4>3-0</h4>
+
+<span>Marist University</span>
+
+</div>
+
+<div class="result winText">
+WIN
+</div>
+
+</div>
+
+<p>NECC Week 2</p>
+
+
+
+</div>
+
+<div class="matchCard win necc">
+
+<div class="matchTop">
+
+<div class="teams">
+
+<span>St Clair College</span>
+
+<h4>3-0</h4>
+
+<span>Marywood University</span>
+
+</div>
+
+<div class="result winText">
+WIN
+</div>
+
+</div>
+
+<p>NECC Week 3</p>
+
+</div>
+
+<div class="matchCard win necc">
+
+<div class="matchTop">
+
+<div class="teams">
+
+<span>St Clair College</span>
+
+<h4>3-2</h4>
+
+<span>Thomas College</span>
+
+</div>
+
+<div class="result winText">
+WIN
+</div>
+
+</div>
+
+<p>NECC Week 4</p>
+
+</div>
+
+<div class="matchCard win necc">
+
+<div class="matchTop">
+
+<div class="teams">
+
+<span>St Clair College</span>
+
+<h4>3-0</h4>
+
+<span>Curry College</span>
+
+</div>
+
+<div class="result winText">
+WIN
+</div>
+
+</div>
+
+<p>NECC Week 5</p>
+
+</div>
+
+<div class="matchCard win necc">
+
+<div class="matchTop">
+
+<div class="teams">
+
+<span>St Clair College</span>
+
+<h4>3-0</h4>
+
+<span>Fisher University</span>
+
+</div>
+
+<div class="result winText">
+WIN
+</div>
+
+</div>
+
+<p>NECC Week 6</p>
+
+</div>
+
+<div class="matchCard win necc">
+
+<div class="matchTop">
+
+<div class="teams">
+
+<span>St Clair College</span>
+
+<h4>3-0</h4>
+
+<span>MontClair State University</span>
+
+</div>
+
+<div class="result winText">
+WIN
+</div>
+
+</div>
+
+<p>NECC Week 7</p>
+
+</div>
+
+<div class="matchCard win necc">
+
+<div class="matchTop">
+
+<div class="teams">
+
+<span>St Clair College</span>
+
+<h4>3-0</h4>
+
+<span>MSU White</span>
+
+</div>
+
+<div class="result winText">
+WIN
+</div>
+
+</div>
+
+<p>NECC Playoffs Round 1</p>
+
+</div>
+
+<div class="matchCard win necc">
+
+<div class="matchTop">
+
+<div class="teams">
+
+<span>St Clair College</span>
+
+<h4>3-1</h4>
+
+<span>Marywood University</span>
+
+</div>
+
+<div class="result winText">
+WIN
+</div>
+
+</div>
+
+<p>NECC Playoffs Round 2</p>
+
+</div>
+
+<div class="matchCard win necc">
+
+<div class="matchTop">
+
+<div class="teams">
+
+<span>St Clair College</span>
+
+<h4>0-0</h4>
+
+<span>Lander University Academy</span>
+
+</div>
+
+<div class="result winText">
+Upcoming Match April 14th
+</div>
+
+</div>
+
+<p>NECC Playoffs Finals (Championship)</p>
+
+</div>
+<!--2026 No Mans LAN-->
+<div class="matchCard win college">
+
+<div class="matchTop">
+
+<div class="teams">
+
+<span>The Wobblers</span>
+
+<h4>4-0</h4>
+
+<span>Champions</span>
+
+</div>
+
+<div class="result winText">
+WIN
+</div>
+
+</div>
+
+<p>LAN Event, Didn't drop a series</p>
+<!-- No VOD for LAN event, so no link 
+<a href="#" class="vod">
+Watch VOD
+</a> -->
+
+</div>
+
+</div>
+
+</div>
+
+<div class="seasonTracker">
+
+<h3>Season Tracker</h3>
+
+<div class="seasonCard">
+
+<h4>NECC 2026 Winter East A Division V</h4>
+
+<div class="record">
+
+<span class="wins">
+9W
+</span>
+
+<span class="losses">
+0L
+</span>
+
+
+</div>
+
+<div class="recordBar">
+
+<div class="winBar"
+style="width:100%">
+</div>
+
+<div class="lossBar"
+style="width:0%">
+</div>
+
+</div>
+
+<p class="winrate">
+Winrate 100%
+</p>
+
+</div>
+
+</div>
+
+<div class="achievements">
+
+<h3>Achievements</h3>
+
+<div class="achBox">
+
+<div class="ach">
+2026 NECC Win Streak - 9 - 7 Wins in Division V, 2 Playoff Wins
+</div>
+
+<div class="ach">
+2026 No Mans LAN Champions, St.Clair College without losing a series
+</div>
+
+
+<div class="ach">
+Rank - Grandmaster
+</div>
+
+<div class="ach">
+Varsity Starter Support for St. Clair College Esports Team
+</div>
+
+</div>
+
+</div>
+
+<div class="favoriteHero">
+
+<h3>Signature Hero</h3>
+
+<img src="Graphic-Design-Port-test-site-main/img/Loki_Hero_Portrait.webp" alt="Loki hero portrait"
+class="heroRender">
+
+<p>Loki</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="particles.js"></script>
+
+<script src="main.js"></script>
+
+<script src="esports_page_script.js"></script>
+
+<!-- Footer -->
+
+<footer>
+  <p> Contact at @acemerseMR on X, @bobross5000 on Instagram, acemerse on Discord</p>
+  <p> 2026 MerseDesigns. Designed by Aiden Demers.</p>
+</footer>

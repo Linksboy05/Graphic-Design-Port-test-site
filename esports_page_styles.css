@@ -1,0 +1,1007 @@
+html,
+body{
+  margin:0;
+  padding:0;
+  min-height:100%;
+}
+
+body{
+  font-family:Montserrat;
+  background:transparent;
+  color:white;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+.page{
+  position:relative;
+  z-index:5;
+  padding:20px;
+  flex:1;
+}
+
+#particles{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+z-index:-10;
+
+background:
+radial-gradient(
+circle at 50% 20%,
+#1a0b2e,
+#05010d 70%
+);
+
+}
+
+.page{
+
+position:relative;
+
+z-index:5;
+
+padding:20px;
+
+}
+
+/* NAVBAR */
+
+.navbar{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:15px;
+
+background:rgba(15,5,35,.6);
+
+backdrop-filter:blur(10px);
+
+border-radius:10px;
+
+position:sticky;
+
+top:15px;
+
+z-index:999;
+
+}
+
+.navbar.scrolled{
+
+box-shadow:0 0 18px rgba(168,85,247,.35);
+
+}
+
+.navCenter{
+
+display:flex;
+
+gap:30px;
+
+}
+
+.navCenter a{
+
+color:#c084fc;
+
+cursor:pointer;
+
+}
+
+.navCenter .active{
+
+color:white;
+
+}
+
+.join{
+
+background:#7c3aed;
+
+border:none;
+
+color:white;
+
+padding:8px 15px;
+
+border-radius:6px;
+
+}
+
+.leagueSelect{
+
+background:#7c3aed;
+
+border:none;
+
+color:white;
+
+padding:8px 15px;
+
+border-radius:6px;
+
+margin-bottom:10px;
+
+}
+
+/* GRID */
+
+.mainGrid{
+
+display:grid;
+
+grid-template-columns:minmax(220px, 1fr) minmax(900px, 4fr) minmax(220px, 1fr);
+
+gap:20px;
+
+margin-top:20px;
+
+align-items:start;
+
+}
+
+.leftPanel{
+
+display:flex;
+
+flex-direction:column;
+
+gap:16px;
+
+}
+
+.rightPanel{
+
+display:flex;
+
+flex-direction:column;
+
+gap:16px;
+
+}
+
+/* CENTER PLAYER PANEL */
+
+.centerPanel{
+
+position:relative;
+
+text-align:center;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:flex-start;
+
+padding-top:0;
+
+overflow:hidden;
+
+width:100%;
+
+z-index:2;
+
+}
+
+.logoBackground{
+
+position:fixed;
+
+inset:0;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+pointer-events:none;
+
+z-index:1;
+
+}
+
+.teamLogo{
+
+position:absolute;
+
+top:50%;
+
+left:50%;
+
+transform:translate(-50%, -50%);
+
+width:100vw;
+
+height:100vh;
+
+max-width:none;
+
+max-height:none;
+
+object-fit:cover;
+
+opacity:.2;
+
+filter:brightness(.9);
+
+}
+
+.playerPhotoWrapper{
+
+position:relative;
+
+width:100%;
+
+max-width:100%;
+
+z-index:2;
+
+padding-top:40px;
+
+}
+
+.player{
+
+width:100%;
+
+height:auto;
+
+display:block;
+
+margin:0 auto;
+
+border-radius:0;
+
+object-fit:contain;
+
+max-height:55vh;
+
+mix-blend-mode:normal;
+
+}
+
+.playerPhotoWrapper::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+right:0;
+
+bottom:0;
+
+height:18%;
+
+background:linear-gradient(rgba(5,1,13,0), rgba(5,1,13,0.85));
+
+pointer-events:none;
+
+}
+
+.mediaSection{
+
+position:relative;
+
+z-index:2;
+
+width:100%;
+
+max-width:620px;
+
+margin:24px auto 0;
+
+padding:18px 16px 16px;
+
+background:rgba(15,5,35,.88);
+
+backdrop-filter:blur(12px);
+
+border:1px solid rgba(255,255,255,.1);
+
+border-radius:24px;
+
+}
+
+.carouselSection{
+
+margin-top:18px;
+
+}
+
+.carouselHeader{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+margin-bottom:18px;
+
+}
+
+.carouselHeader h4{
+
+margin:0;
+
+font-size:1rem;
+
+letter-spacing:1.5px;
+
+text-transform:uppercase;
+
+color:#fff;
+
+}
+
+.carouselControls{
+
+display:flex;
+
+gap:10px;
+
+}
+
+.carouselBtn{
+
+width:38px;
+
+height:38px;
+
+border:none;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.1);
+
+color:#fff;
+
+font-size:1.2rem;
+
+cursor:pointer;
+
+transition:background .2s ease;
+
+}
+
+.carouselBtn:hover{
+
+background:rgba(255,255,255,.18);
+
+}
+
+.carouselTrack{
+
+display:flex;
+
+gap:12px;
+
+overflow-x:auto;
+
+scroll-snap-type:x mandatory;
+
+padding-bottom:6px;
+
+}
+
+.carouselTrack::-webkit-scrollbar{
+
+height:10px;
+
+}
+
+.carouselTrack::-webkit-scrollbar-thumb{
+
+background:rgba(255,255,255,.18);
+
+border-radius:999px;
+
+}
+
+.carouselCard{
+
+min-width:180px;
+
+flex:0 0 auto;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.12);
+
+border-radius:20px;
+
+overflow:hidden;
+
+scroll-snap-align:start;
+
+}
+
+.carouselCard img,
+.carouselCard video{
+
+width:100%;
+
+height:auto;
+
+display:block;
+
+object-fit:cover;
+
+max-height:200px;
+
+cursor:pointer;
+
+transition:transform 0.2s ease;
+
+}
+
+.carouselCard img:hover,
+.carouselCard video:hover{
+
+transform:scale(1.05);
+
+}
+
+.carouselCard video{
+
+max-height:280px;
+
+}
+
+.mediaLabel{
+
+width:100%;
+
+padding:14px 16px;
+
+text-align:center;
+
+font-size:0.95rem;
+
+letter-spacing:1px;
+
+color:#fff;
+
+background:rgba(0,0,0,.2);
+
+}
+
+.mediaSection h3{
+
+margin:0 0 14px;
+
+font-size:1rem;
+
+letter-spacing:1.5px;
+
+text-transform:uppercase;
+
+color:#fff;
+
+}
+
+/* LIGHTBOX MODAL */
+.lightboxModal{
+
+display:none;
+
+position:fixed;
+
+z-index:1000;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+background-color:rgba(0,0,0,0.95);
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+.lightboxModal.active{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+.lightboxImage{
+
+max-width:90vw;
+
+max-height:85vh;
+
+object-fit:contain;
+
+border-radius:10px;
+
+}
+
+.lightboxCaption{
+
+color:#fff;
+
+text-align:center;
+
+margin-top:20px;
+
+font-size:16px;
+
+font-family:Montserrat,sans-serif;
+
+}
+
+.lightboxClose{
+
+position:absolute;
+
+top:30px;
+
+right:40px;
+
+color:#fff;
+
+font-size:40px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+.lightboxClose:hover{
+
+color:#bbb;
+
+}
+
+.mediaGrid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:18px;
+
+}
+
+.mediaPreview{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.12);
+
+border-radius:20px;
+
+overflow:hidden;
+
+}
+
+.mediaPreview img,
+.mediaPreview video{
+
+width:100%;
+
+height:auto;
+
+display:block;
+
+object-fit:cover;
+
+}
+
+.mediaPreview video{
+
+max-height:280px;
+
+}
+
+.mediaLabel{
+
+width:100%;
+
+padding:14px 16px;
+
+text-align:center;
+
+font-size:0.95rem;
+
+letter-spacing:1px;
+
+color:#fff;
+
+background:rgba(0,0,0,.2);
+
+}
+
+.gamertag{
+
+position:relative;
+
+z-index:2;
+
+font-family:Rajdhani;
+
+letter-spacing:4px;
+
+margin:18px 0 0;
+
+font-size:4rem;
+
+line-height:1;
+
+text-transform:uppercase;
+
+color:#fff;
+
+}
+
+.mediaLabel{
+
+position:relative;
+
+z-index:2;
+
+margin-top:16px;
+
+font-size:0.95rem;
+
+letter-spacing:1.5px;
+
+text-transform:uppercase;
+
+color:rgba(255,255,255,0.85);
+
+}
+
+/* PLAYER NAME */
+
+/* PANELS */
+
+.playerCard,
+.statsPanel,
+.matchBox,
+.matchHistory,
+.seasonTracker,
+.achievements,
+.favoriteHero{
+
+background:rgba(20,10,45,.6);
+
+padding:15px;
+
+border-radius:10px;
+
+margin-bottom:20px;
+
+backdrop-filter:blur(8px);
+
+}
+
+/* MATCHES */
+
+.matchCard{
+
+padding:10px;
+
+margin-top:10px;
+
+border-radius:8px;
+
+background:rgba(10,5,25,.7);
+
+}
+
+.win{
+
+border-left:4px solid #22c55e;
+
+}
+
+.loss{
+
+border-left:4px solid #ef4444;
+
+}
+
+.winText{
+
+color:#22c55e;
+
+}
+
+.lossText{
+
+color:#ef4444;
+
+}
+
+/* RECORD BAR */
+
+.recordBar{
+
+display:flex;
+
+height:10px;
+
+border-radius:10px;
+
+overflow:hidden;
+
+background:black;
+
+margin-top:8px;
+
+}
+
+.winBar{
+
+background:#22c55e;
+
+}
+
+.lossBar{
+
+background:#ef4444;
+
+}
+
+/* HERO */
+
+.favoriteHero{
+  max-width:260px;
+  width:100%;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+.heroRender{
+  width:100%;
+  max-width:220px;
+  height:auto;
+  display:block;
+  margin:0 auto;
+}
+
+footer{
+  margin-top:auto;
+  padding:18px 20px;
+  text-align:center;
+  background:rgba(15,5,35,.8);
+  color:#ddd;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:768px){
+
+.mainGrid{
+  grid-template-columns:1fr;
+  gap:15px;
+}
+
+.page{
+  padding:12px;
+}
+
+.navbar{
+  padding:12px;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.navCenter{
+  gap:15px;
+  font-size:0.9rem;
+}
+
+.join{
+  font-size:0.85rem;
+  padding:8px 12px;
+}
+
+.player{
+  max-height:35vh;
+}
+
+.playerCard h2{
+  font-size:1.3rem;
+}
+
+.playerCard p{
+  font-size:0.9rem;
+}
+
+.leagueSelect{
+  width:100%;
+  margin-bottom:12px;
+}
+
+.matchCard{
+  padding:10px;
+}
+
+.matchBox{
+  padding:12px;
+}
+
+.matchTop{
+  flex-direction:column;
+  gap:8px;
+}
+
+.teams{
+  gap:8px;
+}
+
+.result{
+  margin-top:8px;
+}
+
+.role img.roleIcon{
+  width:30px;
+  height:30px;
+}
+
+.mediaLabel{
+  font-size:0.85rem;
+  padding:8px 10px;
+}
+
+.carouselCard{
+  min-width:150px;
+}
+
+.carouselCard img,
+.carouselCard video{
+  max-height:160px;
+}
+
+}
+
+@media(max-width:480px){
+
+.mainGrid{
+  gap:10px;
+}
+
+.page{
+  padding:8px;
+}
+
+.navbar{
+  padding:8px;
+  flex-direction:column;
+  gap:6px;
+}
+
+.logo{
+  font-size:1rem;
+}
+
+.navCenter{
+  gap:10px;
+  font-size:0.8rem;
+}
+
+.join{
+  font-size:0.75rem;
+  padding:6px 10px;
+}
+
+.playerCard h2{
+  font-size:1.1rem;
+  margin-bottom:6px;
+}
+
+.playerPhotoWrapper{
+  padding-top:15px;
+}
+
+.player{
+  max-height:30vh;
+}
+
+.gamertag{
+  font-size:1.1rem;
+  margin:8px 0;
+}
+
+.mediaSection{
+  max-width:100%;
+  padding:12px;
+}
+
+.mediaSection h3{
+  font-size:0.9rem;
+}
+
+.carouselHeader h4{
+  font-size:0.85rem;
+}
+
+.carouselCard{
+  min-width:120px;
+}
+
+.carouselCard img,
+.carouselCard video{
+  max-height:140px;
+}
+
+.carouselBtn{
+  width:32px;
+  height:32px;
+  font-size:1rem;
+}
+
+.playerCard p,
+.matchCard p{
+  font-size:0.85rem;
+}
+
+.matchBox h3{
+  font-size:1.1rem;
+}
+
+.score h1{
+  font-size:1.3rem;
+}
+
+.score span{
+  font-size:0.85rem;
+}
+
+.matchCard{
+  padding:8px;
+}
+
+.teams h4{
+  font-size:1rem;
+}
+
+.leagueSelect{
+  font-size:0.9rem;
+  padding:6px 10px;
+}
+
+}
